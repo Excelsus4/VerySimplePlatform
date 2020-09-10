@@ -23,7 +23,7 @@ float speed = 200.0f;
 float js = 0.6f;
 
 void Update() {
-	//TODO: Replace this with a auto movement, which needs a stopper at either end
+	//Replace this with a auto movement, which needs a stopper at either end
 	if (bIsMoving)
 		player->AutoMove();
 
@@ -50,7 +50,7 @@ void Render() {
 	D3DXCOLOR bgColor = D3DXCOLOR(0.1f, 0.1f, 0.1f, 1);
 	DeviceContext->ClearRenderTargetView(RTV, (float*)bgColor);
 	{
-		//TODO: Create ImGUI Slider Float for adjusting speed, Create ImGUI Button For Start and Stop
+		//Create ImGUI Slider Float for adjusting speed, Create ImGUI Button For Start and Stop
 		if (ImGui::Button(bIsMoving?"Stop":"Start")) {
 			bIsMoving = !bIsMoving;
 		}
